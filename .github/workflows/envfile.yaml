@@ -19,3 +19,9 @@ jobs:
     - name: List the files
       run: |
         ls -alG
+    
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v4
+      with:
+        push: true
+        tags: testy:latest
