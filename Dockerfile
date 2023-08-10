@@ -6,5 +6,5 @@ COPY . .
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN ls -alG
+RUN ls -al
 RUN cat .env.production && yarn global add pnpm && SKIP_ENV_VALIDATION=1 pnpm run build
